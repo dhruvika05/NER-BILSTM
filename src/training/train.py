@@ -30,7 +30,7 @@ def train_model():
     
     # 4. The Loss Function and Optimizer
     # ignore_index=0 tells PyTorch: "Do not calculate loss for <PAD> tokens!"
-    criterion = nn.CrossEntropyLoss(ignore_index=0)
+    criterion = nn.CrossEntropyLoss(ignore_index=-100)
     
     # Adam is the most popular optimizer. lr=0.001 is the "Learning Rate" 
     # (how drastically it turns the dials after each mistake)

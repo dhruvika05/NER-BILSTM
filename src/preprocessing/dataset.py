@@ -41,7 +41,7 @@ class NERDataset(Dataset):
         pad_len = self.max_len - len(word_ids)
         if pad_len > 0:
             word_ids += [self.word2idx["<PAD>"]] * pad_len
-            tag_ids += [TAG2IDX["O"]] * pad_len
+            tag_ids += [-100] * pad_len
             mask += [0] * pad_len
 
         return {

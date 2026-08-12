@@ -90,17 +90,17 @@ python -m src.evaluation.evaluate
 
 ## 🌐 Running the Application & API Documentation
 
-To launch the live inference server:
+### Live Cloud API
+You can access the fully deployed API and its automatic Swagger UI directly from your browser without installing anything locally:
+**https://ner-bilstm.onrender.com/docs**
+
+### Local Development
+To launch the live inference server on your local machine:
 
 ```bash
 python -m uvicorn app:app --reload
-```
-
-Once the server says Application startup complete, navigate to the automatic Swagger UI in your browser for full API documentation:
-
-```text
+Once the server says Application startup complete, navigate to the automatic Swagger UI in your browser:
 http://127.0.0.1:8000/docs
-```
 
 ### API Usage Example
 

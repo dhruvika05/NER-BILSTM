@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import torch
 import json
+import re
 
 from src.models.bilstm import BiLSTM_NER
 from src.preprocessing.dataset import IDX2TAG
@@ -39,7 +40,8 @@ def load_model():
 # 4. Create the prediction endpoint
 @app.post("/predict")
 def predict_entities(request: NERRequest):
-    words = request.text.split()
+    # Swap out the basic .split() for the regex tokenization
+    words = re.findall(r"\w+|[^\w\s]", request.text)
     
     word_ids = []
     for w in words:

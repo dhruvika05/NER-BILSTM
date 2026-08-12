@@ -99,8 +99,12 @@ To launch the live inference server on your local machine:
 
 ```bash
 python -m uvicorn app:app --reload
+```
+
 Once the server says Application startup complete, navigate to the automatic Swagger UI in your browser:
+```text
 http://127.0.0.1:8000/docs
+```
 
 ### API Usage Example
 

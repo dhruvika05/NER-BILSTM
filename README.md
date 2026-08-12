@@ -43,10 +43,12 @@ ner-bilstm/
 └── README.md
 
 
-⚙️ Installation & Setup
-1. Clone the repository:
-git clone [https://github.com/yourusername/ner-bilstm.git](https://github.com/yourusername/ner-bilstm.git)
-cd ner-bilstm
+## ⚙️ Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/yourusername/ner-bilstm.git](https://github.com/yourusername/ner-bilstm.git)
+   cd ner-bilstm
 
 2. Create and activate a virtual environment:
 python -m venv venv
